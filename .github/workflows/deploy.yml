@@ -1,4 +1,4 @@
-ㅇname: MQnet Home CI/CD
+name: MQnet Home CI/CD
 
 on:
   push:
