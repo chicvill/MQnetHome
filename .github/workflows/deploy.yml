@@ -10,6 +10,10 @@ jobs:
   build-and-deploy:
     runs-on: self-hosted
 
+    defaults:
+      run:
+        shell: cmd
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,4 +21,4 @@ jobs:
       - name: Verify Workspace
         run: |
           echo "Running on self-hosted runner..."
-          Get-ChildItem
+          dir
