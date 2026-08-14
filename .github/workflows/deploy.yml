@@ -1,0 +1,20 @@
+ㅇname: MQnet Home CI/CD
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify Workspace
+        run: |
+          echo "Running on self-hosted runner..."
+          Get-ChildItem
